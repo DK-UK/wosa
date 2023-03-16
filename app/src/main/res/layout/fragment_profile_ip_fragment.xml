@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cream"
+    tools:context=".Profile_fragments.profile_ip_fragment">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/blue"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            >
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logo2"
+                app:civ_border="true"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/cream"
+                android:elevation="11dp"
+                android:layout_centerHorizontal="true"
+                />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="86dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:cardCornerRadius="20dp"
+                            android:elevation="7dp"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginTop="20dp"
+                                >
+                                // Profile Image
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/profile_relative_layout"
+                                    >
+
+                                </RelativeLayout>
+                                // User Personal Details
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="15dp">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/user_input1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        app:errorEnabled="true">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/user_fullname"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Full Name"
+                                            android:textSize="15dp" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        >
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Mobile : "
+                                            android:paddingLeft="10dp"
+                                            android:textSize="18dp"
+                                            />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/Phone_num"
+                                            android:text="Not defined"
+                                            android:textSize="18dp"
+                                            />
+                                    </LinearLayout>
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/userInput4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        app:errorEnabled="true">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/user_age"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:inputType="number"
+                                            android:hint="Age" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/userInput3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                        app:errorEnabled="true">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/user_address"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Residential Address" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+
+                     <!--               <Button
+                                        android:id="@+id/save_btn"
+                                        android:layout_width="125dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Save"
+                                        android:textColor="@color/blue"
+                                        android:textSize="18dp"
+                                        app:backgroundTint="@color/white"
+                                        app:strokeColor="@color/blue"
+                                        app:strokeWidth="1dp"
+                                        android:elevation="5dp"
+                                        app:cornerRadius="15dp"></Button>
+                    -->
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+</FrameLayout>

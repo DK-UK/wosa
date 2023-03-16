@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">WOSA</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="testMsg">This will send a text message to your registered contacts that you added them as your emergency contacts</string>
+    <string name="sendMsg">I added you as my emergency contact.You\'ll receive a message with my location info in case I\'m in danger</string>
+    <string name="safeDiaMsg">This will send a message that you are secure now</string>
+    <string name="safeMsg">Don\'t worry,I\'m Safe Now</string>
+    <string name="about_wosa">WOSA is a woman safety android application
+        developed for protecting lives of people in any emergency situations.
+        In case of unsafe situation,just TAP the PANIC button to raise a
+        emergency alert to the trusted contacts saved in the application.
+        This alert will be in the form of SMS informing that you are unsafe
+        and need help.The SMS includes accurate current GPS location with
+        address of the user along with google maps link and recorded audio link.The trusted contacts
+        can use this google maps link to get directions and navigate to the
+        exact location of the distressed person.</string>
+
+    <string name="night_mode">Night Mode</string>
+    <string name="day_mode">Day Mode</string>
+    <string name="confirmationCode">Enter your confirmation code</string>
+    <string name="sendCode">\"We sent a 6-digit code to \"</string>
+
+</resources>

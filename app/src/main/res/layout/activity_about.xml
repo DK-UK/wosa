@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream"
+    android:fitsSystemWindows="true"
+    tools:context=".menu_items.About">
+        <include
+        android:id="@+id/include"
+            android:layout_alignParentTop="true"
+        layout="@layout/navigation_actionbar"
+            tools:ignore="IncludeLayoutParam" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/include"
+            android:elevation="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:padding="20dp"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/about_text"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:justificationMode="inter_word"
+            android:text="@string/about_wosa"
+
+            />
+        </androidx.cardview.widget.CardView>
+</RelativeLayout>

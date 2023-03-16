@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- TODO Remove the following "exclude" elements to make them a part of the auto backup -->
+    <!-- Exclude the shared preferences file that contains the GCM registrationId -->
+    <exclude
+        domain="sharedpref"
+        path="buzzer_tone.xml" />
+    <exclude
+        domain="sharedpref"
+        path="audioPref.xml" />
+    <exclude
+        domain="sharedpref"
+        path="save.xml" />
+    <exclude
+        domain="sharedpref"
+        path="phoneDetail.xml" />
+    <exclude
+        domain="sharedpref"
+        path="alarmRunningPref.xml" />
+    <exclude
+        domain="sharedpref"
+        path="Save_Num.xml" />
+</full-backup-content>

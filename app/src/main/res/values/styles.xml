@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActivityTransitions" tools:targetApi="lollipop">true</item>
+        <item name="drawerArrowStyle">@style/DrawerArrow</item>
+    </style>
+    <style name="NoActionBar">
+    <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    //settings Themes
+    <style name="top_margin" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+    <style name="FittoSystem" parent="AppTheme">
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <style name="ClipToPadding" parent="AppTheme">
+        <item name="android:clipToPadding">true</item>
+    </style>
+    <style name="margin_top" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="DrawerArrow" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/white</item>
+    </style>
+</resources>

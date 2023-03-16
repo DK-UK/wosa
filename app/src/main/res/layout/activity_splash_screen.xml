@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_1"
+    tools:context=".Splash_screen">
+
+<!-- background color =  #74D0F5-->
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="200dp"
+        android:id="@+id/splash_img"
+        android:layout_height="200dp"
+        android:src="@drawable/logo2"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/cream"
+        android:layout_centerInParent="true"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Women Safety"
+        android:textSize="26dp"
+        android:layout_below="@id/splash_img"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="@color/white"
+        android:elevation="6dp"
+        />
+
+</RelativeLayout>

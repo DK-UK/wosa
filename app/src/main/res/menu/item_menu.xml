@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+
+    <item android:id="@+id/profile"
+    android:icon="@drawable/ic_profile"
+    android:title="Profile"/>
+
+    <item android:id="@+id/recepient"
+        android:icon="@drawable/ic_recepient"
+        android:title="Recepients"/>
+
+    <item android:id="@+id/self_defense"
+        android:icon="@drawable/self_defense2"
+        android:title="Self Defense"/>
+    
+    <item android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"/>
+
+    <item android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout" />
+   
+</group>
+</menu>

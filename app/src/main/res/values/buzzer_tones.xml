@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="buzzer_tone_entry">
+        <item name="1">Help 1</item>
+        <item name="2">Help 2</item>
+        <item name="4">Female Scream1</item>
+        <item name="5">Female Scream2</item>
+        <item name="6">Police Siren1</item>
+        <item name="7">Police Siren2</item>
+    </string-array>
+    <string-array name="buzzer_tone_entry_values">
+        <item name="1">Help 1</item>
+        <item name="2">Help 2</item>
+        <item name="4">Female Scream1</item>
+        <item name="5">Female Scream2</item>
+        <item name="6">Police Siren1</item>
+        <item name="7">Police Siren2</item>
+    </string-array>
+</resources>

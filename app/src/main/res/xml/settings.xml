@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <PreferenceCategory android:title="Sounds"
+        app:allowDividerBelow="true">
+        <ListPreference android:title="Buzzer tones"
+            android:key="buzzer_tones"
+            android:entries="@array/buzzer_tone_entry"
+            android:entryValues="@array/buzzer_tone_entry_values"
+            android:summary="%s"
+            app:allowDividerBelow="true"
+            />
+<!--        <SeekBarPreference android:key="buzzer_volume"-->
+<!--            android:title="Buzzer Volume"-->
+<!--            app:min="1" android:max="15"-->
+<!--            app:defaultValue="true"-->
+<!--            android:defaultValue="15"-->
+<!--            />-->
+    </PreferenceCategory>
+
+    <Preference android:title="About"
+        android:key="about"
+        app:allowDividerBelow="true"
+        app:allowDividerAbove="true"
+        android:summary="Explore more about WOSA"
+        >
+    </Preference>
+    <Preference android:title="Feedback"
+        android:key="feedback"
+        app:allowDividerBelow="true"
+        android:summary="report errors or suggest new features"
+        />
+</PreferenceScreen>

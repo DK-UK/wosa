@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/blue"
+    android:orientation="vertical">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo2"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/cream"
+        android:id="@+id/header_circular_img"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:elevation="6dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="WOSA"
+        android:textSize="20dp"
+        android:paddingTop="10dp"
+        android:layout_below="@id/header_circular_img"
+        android:id="@+id/header_name"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginLeft="40dp"
+        />
+</RelativeLayout>

@@ -139,6 +139,7 @@ public class VerifyOTP extends Fragment {
                 public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                     super.onCodeSent(s, forceResendingToken);
                     codeSent = s;
+                    Log.e(TAG, "onCodeSent: otp : " + codeSent);
                 }
 
                 @Override

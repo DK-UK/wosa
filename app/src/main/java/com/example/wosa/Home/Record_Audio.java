@@ -1,12 +1,14 @@
 package com.example.wosa.Home;
 
 import android.Manifest;
+import android.content.ContentValues;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.CountDownTimer;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -26,6 +28,9 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Random;
 
 
@@ -56,7 +61,45 @@ public class Record_Audio {
                 PermissionChecker.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context,Manifest.permission.RECORD_AUDIO) ==
                 PermissionChecker.PERMISSION_GRANTED){
             audioSavePathInDevice = Environment.getExternalStorageDirectory().getAbsolutePath()+"/"+/*
-                    randomFileName(4)+*/"audioRecording1WOSA.3gp";
+                    randomFileName(4)+*/"audioRecording1WOSA.mp4";
+
+            // Set up the values for the new audio file
+            ContentValues values = new ContentValues();
+            values.put(MediaStore.Audio.Media.DISPLAY_NAME, "my_audio.mp4");
+            values.put(MediaStore.Audio.Media.MIME_TYPE, "audio/mp4");
+            values.put(MediaStore.Audio.Media.RELATIVE_PATH, Environment.DIRECTORY_MUSIC + "/my_app_audio");
+
+// Get the Uri for the MediaStore Audio collection
+            Uri collection = MediaStore.Audio.Media.getContentUri(MediaStore.VOLUME_INTERNAL);
+
+// Insert the new audio file into the MediaStore Audio collection
+            Uri audioUri = context.getContentResolver().insert(collection, values);
+
+            try {
+
+                context.getContentResolver().openOutputStream(audioUri, "w");
+
+                // Get an OutputStream to the audio file
+//                OutputStream outputStream = context.getContentResolver().openOutputStream(audioUri);
+
+                // Write the audio data to the OutputStream
+               /* InputStream inputStream = *//* your audio data *//*;
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+
+                // Close the streams
+                inputStream.close();
+                outputStream.close();*/
+            } catch (IOException e) {
+                // Handle the exception
+            }
+
+
+            Log.e(TAG, "recordAudio: path " + audioSavePathInDevice);
+
             mediaRecorderReady();
             try {
                 mediaRecorder.prepare();
@@ -64,8 +107,9 @@ public class Record_Audio {
                 Log.e(TAG, "recordAudio");
             } catch (Exception e) {
                 Toast.makeText(context,"Exception mediaRecorder : "+e.getMessage(),Toast.LENGTH_LONG).show();
+                Log.e(TAG, "recordAudio: exception : " + e.toString());
             }
-            Toast.makeText(context,"audio recording...",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context,"audio recording...",Toast.LENGTH_SHORT).show();
         }
         else{
             new userLocation(context).userPermissions(false);
@@ -169,12 +213,16 @@ public class Record_Audio {
 
     
     public void mediaRecorderReady() {
-        mediaRecorder = null;
         mediaRecorder = new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+        mediaRecorder.setAudioChannels(1);
+        mediaRecorder.setAudioSamplingRate(44100);
+        mediaRecorder.setAudioEncodingBitRate(192000);
         mediaRecorder.setOutputFile(audioSavePathInDevice);
+
+        Log.e(TAG, "mediaRecorderReady: path : " + audioSavePathInDevice);
     }
 
     public String randomFileName(int string){

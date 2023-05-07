@@ -108,6 +108,7 @@ public static final String TAG = "Main";
         };
         String rationale = "permission required";
         Permissions.Options options = new Permissions.Options()
+                .setCreateNewTask(true)
                 .setRationaleDialogTitle("Info")
                 .setSettingsDialogTitle("Warning");
         Permissions.check(context/*context*/, permissions, rationale, options, new PermissionHandler() {

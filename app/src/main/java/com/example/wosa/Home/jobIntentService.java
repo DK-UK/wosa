@@ -45,12 +45,12 @@ public class jobIntentService extends JobIntentService {
 
                       new userLocation(getApplicationContext()).userPermissions(true);
 
-                      if(alarmManager.getRecordAudioFirstTime()){
+                     /* if(alarmManager.getRecordAudioFirstTime()){
                                 alarmManager.recordAudioFirstTime = false;
 //                      Log.e(TAG, "run: After User Location Audio stat : "+new recordAudioPref(getApplicationContext()).isRecordAudioForFirstTime());
 //                       if(new recordAudioPref(getApplicationContext()).isRecordAudioForFirstTime()){
 //                          new recordAudioPref(getApplicationContext()).setRecordAudioForFirstTime(false);
-                              new Record_Audio(getApplicationContext()).startAudioTimer();
+//                              new Record_Audio(getApplicationContext()).startAudioTimer();
 
                               if (Record_Audio.getWorkFinished()) {
                                   Log.e(TAG, "workFinished");
@@ -59,7 +59,7 @@ public class jobIntentService extends JobIntentService {
                       }
                        else{
                            Log.e(TAG, "audio already recorded");
-                       }
+                       }*/
                   }
               },0);
             }
